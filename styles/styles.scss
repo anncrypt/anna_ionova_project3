@@ -1,16 +1,10 @@
 @import 'partials/setup.scss';
+@import 'partials/variables.scss';
+@import 'partials/general.scss';
+@import 'partials/header.scss';
+@import 'partials/filters.scss';
+@import 'partials/gallery.scss';
+@import 'partials/footer.scss';
 
-#breed-gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.breed-card {
-    width: 200px;
-    height: 200px;
-    border-radius: 3px;
 
-    .breed-pic {
-        width: 100%;
-    }
-}

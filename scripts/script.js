@@ -97,7 +97,7 @@ breedPicker.breeds = [
         image: 'beagle.jpg',
         goodForApartment: true,
         requiresDogExperience: true,
-        kidFriendly: true, //false
+        kidFriendly: true, 
         goodWithPets: true,
         hypoallergenic: false,
         furLength: 'short',
@@ -218,23 +218,23 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'high'
     },
-    // CESKY TERRIER
+    // PIT BULL TERRIER
     {
-        name: 'Cesky Terrier',
-        id: 'cesky',
-        image: 'ceskyterrier.jpg',
-        goodForApartment: true,
-        requiresDogExperience: false,
+        name: 'Pit Bull Terrier',
+        id: 'pitbull',
+        image: 'pitbullterrier.jpg',
+        goodForApartment: false,
+        requiresDogExperience: true,
         kidFriendly: true,
         goodWithPets: false,
         hypoallergenic: false,
-        furLength: 'medium',
-        shedding: 'minimal',
+        furLength: 'short',
+        shedding: 'heavy',
         generalHealth: 'good',
         size: 'm',
         easyToTrain: true,
         tendencyToBarkOrHowl: false,
-        energyLevel: 'low'
+        energyLevel: 'high'
     },
     // BASENJI
     {
@@ -387,42 +387,129 @@ breedPicker.breeds = [
 // DOCUMENT READY
 $(document).ready(function(){
     breedPicker.init();
+    
 });
 
 breedPicker.init = function() {
     breedPicker.putDogsOnPage();
-    // foodApp.formSubmit();
+
+    $('input[type=checkbox]').on('click', breedPicker.filterBreeds);
 }
 
+breedPicker.filterBreeds = function () {
+    // console.log('cliiic');
+    const goodForApartment = $('#good-for-apartment').is(':checked');
+    console.log(goodForApartment);
+
+    const requiresDogExperience = $('#requires-dog-experience').is(':checked');
+    console.log(requiresDogExperience);
+
+    const kidFriendly = $('#kid-friendly').is(':checked');
+    console.log(kidFriendly);
+
+
+    const breedCardIDs = breedPicker.breeds.map(function(breed) {
+        return breed.id;
+    });
+    // console.log(breedCardIDs);
+
+    // hide all dog pictures
+    $('.breed-card-container').hide();
+    // decide which breeds need to be shown
+    // based on the selected criteria
+    breedPicker.breeds.forEach(function(breedObj) {
+        // let shouldShowBreed = true;
+
+        // let shouldHideBreed 
+
+        let shouldShowBreed = true;
+
+        if (goodForApartment && breedObj.goodForApartment !== goodForApartment) {
+            console.log(`${breedObj.name} goodForApt => shouldShow -> false`);
+            shouldShowBreed = false;
+        }
+
+        if (requiresDogExperience && breedObj.requiresDogExperience !== requiresDogExperience) {
+            console.log(`${breedObj.name} requiresDogExperience => should show-> false`);
+            shouldShowBreed = false;
+        }
+
+        if (kidFriendly && breedObj.kidFriendly !== kidFriendly) {
+            console.log(`${breedObj.name} kidFriendly => should show-> false`);
+            shouldShowBreed = false;
+        }
+
+        
+        //     shouldShowBreed = shouldShowBreed && breedObj.requiresDogExperience !== requiresDogExperience;
+        // }
+
+
+
+        // if (goodForApartment) {
+        //     shouldShowBreed = breedObj.goodForApartment !== goodForApartment;
+        // }
+
+        // if (requiresDogExperience) {
+        //     shouldShowBreed = shouldShowBreed && breedObj.requiresDogExperience !== requiresDogExperience;
+        // }
+
+        // if (kidFriendly) { 
+        //     shouldShowBreed = shouldShowBreed && breedObj.kidFriendly !== kidFriendly;
+        // }
+
+
+        if (shouldShowBreed) {
+            $(`#${breedObj.id}`).show();
+        }
+    });
+
+}
+
+
 breedPicker.putDogsOnPage = function() {
-    // breed-gallery
+    // give a gallery an id of "breed-gallery"
     const $gallery = $('#breed-gallery');
-    console.log(breedPicker.breeds);
 
     // for every object in the breeds array 
     breedPicker.breeds.forEach(breed => {
-        // --> create a card with an image & info
-        console.log(breed);
+        // --> create a card with two sides: front: an image & back: dog breed name
 
-        // create a card - div container
-        const $card = $(`<div id="${breed.id}" class="breed-card"></div>`);
+        // create a breed-card-container
+        const $container = $(`<div id="${breed.id}" class="breed-card-container"></div>`);
+
+        // create a breed-card 
+        const $card = $(`<div class="breed-card"></div>`);
+
+        // put a breed-card into the breed-card-container
+        $container.append($card);
+
+        
+        // create a front-side of the card
+        const $frontSide = $(`<div class="front-side"></div>`);
 
         // create an img element and give it src and alt
         const $img = $(`<img class="breed-pic" src="assets/${breed.image}" alt="picture of ${breed.name}">`);
 
-        // put img inside the container
-        $card.append($img);
+        // put img inside the front-side container
+        $frontSide.append($img);
 
-        // create p element and put breed name into it
+        // create a back-side of the card
+        const $backSide = $(`<div class="back-side"></div>`);
+        // create a p element and put breed name into it
         const $breedName = $(`<p>${breed.name}</p>`);
 
-        // put p inside the container
-        $card.append($breedName);
+        // put p inside the back-side container
+        $backSide.append($breedName);
+
+        $card.append($frontSide);
+        $card.append($backSide);
 
         // put container inside the breed gallery
-        $gallery.append($card);
+        $gallery.append($container);
     });
-    // for (let i, breed in breedPicker.breeds) {
-        
+
+
 }
+
+
 

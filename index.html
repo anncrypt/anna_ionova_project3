@@ -5,32 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JQuery project</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Project X</h1>
-    </header>
-    <main>
-        <section id="breed-filters">
-            <!-- Filters and controls for the breeds to be displayed
-                will go here type select
-            -->
-        </section>
-        <section id="breed-gallery">
-            <!-- Dog breed 'cards' will go here
-                they will be generated in jQuery
-            -->
-            <div class="breed-card">
-                <img src="#" alt="" >
-                <p>Breed name</p>
+    <div class="main-wrapper">
+        <header>
+            <div class="header narrow-wrapper">
+                <div class="svg-container">
+                    <img src="assets/pup.svg" alt="dog icon">
+                </div>
+                <div class="logo-container">
+                    <h1>Pupmatcher</h1>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
+        </header>
+        <main class="narrow-wrapper">
+            <section id="breed-filters">
+                <!-- Filters and controls for the breeds -->
+                <div class="filter-container">
+                    <input type="checkbox" id="good-for-apartment" name="good-for-apartment" unchecked>
+                    <label for="good-for-apartment">can live in an apartment</label>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="requires-dog-experience" name="requires-dog-experience" unchecked>
+                    <label for="requires-dog-experience">requires dog experience</label>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="kid-friendly" name="kid-friendly" unchecked>
+                    <label for="kid-friendly">loves kids</label>
+                </div>
 
-    </footer>
+
+            </section>
+            <section id="breed-gallery">
+            
+            <!-- Dog breed 'cards' will go here
+            they will be generated in jQuery
+
+                <div class="breed-card-container">!
+                    <div class="breed-card">!
+                        <div class="front-side">!
+                            <img src="#" alt="" >!
+                        </div>
+                        <div class="back-side">!
+                            <p>Breed name</p>!
+                        </div>
+                    </div> 
+                </div> -->
+            
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
 
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>

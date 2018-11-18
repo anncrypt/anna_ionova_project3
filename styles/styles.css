@@ -133,6 +133,56 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%; }
+
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  border: solid 2px tomato; }
+
+.narrow-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  border: solid 2px tomato; }
+
+header {
+  background-color: #24305E;
+  color: #f6f6f6;
+  font-family: "Cabin Sketch", cursive;
+  font-size: 2rem; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .header .svg-container {
+    width: 7%; }
+    .header .svg-container img {
+      width: 100%;
+      color: #f6f6f6;
+      margin: 0; }
+  .header .logo-container h1 {
+    margin: 0; }
+
+#breed-filters {
+  padding: 3rem; }
+  #breed-filters .filter-container {
+    margin-bottom: 2rem; }
+    #breed-filters .filter-container input[type=checkbox] {
+      -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+      transform: scale(2); }
+    #breed-filters .filter-container label {
+      font-size: 2rem;
+      margin-left: 1.4rem; }
+
 #breed-gallery {
   display: -webkit-box;
   display: -ms-flexbox;

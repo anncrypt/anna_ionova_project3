@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+}
+
+
+.wrapper {
+    max-width: 1600px;
+    width: 100%;
+    border: solid 2px tomato;
+}
+
+.narrow-wrapper {
+    // max-width: 1600px;
+    width: 80%;
+    margin: 0 auto;
+    border: solid 2px tomato;
+}

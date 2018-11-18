@@ -1,0 +1,19 @@
+#breed-filters {
+    padding: 3rem;
+
+    .filter-container {
+        margin-bottom: 2rem;
+
+        input[type=checkbox] {
+            // font-size: 22rem;
+            transform: scale(2);
+        }
+    
+        label {
+            font-size: 2rem;
+            margin-left: 1.4rem;
+        }
+
+    } 
+
+}
