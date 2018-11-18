@@ -1,24 +1,7 @@
-
-    /*Filters
-    breed: '';
-    size: 's', 'm', 'l';
-    furLength: 'short','long';
-    breedHealthIssues: 'low', 'severe';
-    shedding: 'minimal', 'some', 'heavy';
-    hypoallergenic: true or false;
-    requiresDogExperience: true or false;
-    goodForApartment: true or false;
-    canStayAlone: true or false;
-    familyFriendly: true or false;
-    tendencyToBark: true or false;
-    energyLevel: 'low', 'moderate', 'high energy';
-    goodWithPets: true or false;
-    easyTotrain: true or false;
-    */
 const breedPicker = {};
 
 breedPicker.breeds = [
-    // COCKER SPANIEL
+    /******* COCKER SPANIEL *******/
     {
         name: 'English Cocker Spaniel',
         id: 'spaniel',
@@ -36,7 +19,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // PUGGY
+    /******* PUGGY *******/
     {
         name: 'Pug',
         id: 'pug',
@@ -48,13 +31,13 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'short',
         shedding: 'heavy',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 'm',
         easyToTrain: true,
         tendencyToBarkOrHowl: false,
         energyLevel: 'moderate'
     },
-    // GOLDENDOODLE / POODLE MIX
+    /******* GOLDENDOODLE *******/
     {
         name: 'Goldendoodle',
         id: 'doodle',
@@ -72,7 +55,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // MALTESE
+    /******* MALTESE *******/
     {
         name: 'Maltese Terrier',
         id: 'maltese',
@@ -90,7 +73,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'moderate'
     },
-    // BEAGLE
+    /******* BEAGLE *******/
     {
         name: 'Beagle',
         id: 'beagle',
@@ -108,7 +91,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // SHIBA INU
+    /******* SHIBA INU *******/
     {
         name: 'Shiba Inu',
         id: 'shiba',
@@ -127,7 +110,7 @@ breedPicker.breeds = [
         energyLevel: 'high'
     },
 
-    // DACHSHUND
+    /******* DACHSHUND *******/
     {
         name: 'Dachshund',
         id: 'dachshund',
@@ -139,13 +122,13 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'short',
         shedding: 'some',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 's',
         easyToTrain: false,
         tendencyToBarkOrHowl: true,
         energyLevel: 'moderate'
     },
-    // CHIHUAHUA
+    /******* CHIHUAHUA *******/
     {
         name: 'Chihuahua',
         id: 'chihua',
@@ -164,7 +147,7 @@ breedPicker.breeds = [
         energyLevel: 'moderate'
     },
 
-    // CORGI
+    /******* CORGI *******/
     {
         name: 'Pembroke Welsh Corgi',
         id: 'corgi',
@@ -182,7 +165,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'moderate'
     },
-    // FRENCHIE
+    /******* FRENCHIE *******/
     {
         name: 'French Bulldog',
         id: 'frenchie',
@@ -194,13 +177,13 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'short',
         shedding: 'some',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 'm',
         easyToTrain: true,
         tendencyToBarkOrHowl: false,
         energyLevel: 'moderate'
     },
-    // GOLDEN RETRIEVER
+    /******* GOLDEN RETRIEVER *******/
     {
         name: 'Golden Retriever',
         id: 'retriever',
@@ -218,7 +201,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'high'
     },
-    // PIT BULL TERRIER
+    /******* PIT BULL TERRIER *******/
     {
         name: 'Pit Bull Terrier',
         id: 'pitbull',
@@ -236,7 +219,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'high'
     },
-    // BASENJI
+    /******* BASENJI *******/
     {
         name: 'Basenji',
         id: 'basenji',
@@ -254,7 +237,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'high'
     },
-    // ALASKAN MALAMUTE
+    /******* ALASKAN MALAMUTE *******/
     {
         name: 'Alaskan Malamute',
         id: 'malamute',
@@ -272,7 +255,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // GREAT DANE
+    /******* GREAT DANE *******/
     {
         name: 'Great Dane',
         id: 'dane',
@@ -290,7 +273,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // AUSTRALIAN SHEPHERD
+    /******* AUSTRALIAN SHEPHERD *******/
     {
         name: 'Australian Shepherd',
         id: 'aussie',
@@ -308,7 +291,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: true,
         energyLevel: 'high'
     },
-    // BASSET HOUND
+    /******* BASSET HOUND *******/
     {
         name: 'Basset Hound',
         id: 'basset',
@@ -320,13 +303,13 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'short',
         shedding: 'heavy',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 'm',
         easyToTrain: false,
         tendencyToBarkOrHowl: true,
         energyLevel: 'low'
     },
-    // POMERANIAN
+    /******* POMERANIAN *******/
     {
         name: 'Pomeranian',
         id: 'pomeranian',
@@ -338,13 +321,13 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'long',
         shedding: 'heavy',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 's',
         easyToTrain: false,
         tendencyToBarkOrHowl: true,
         energyLevel: 'moderate'
     },
-    // CHOW CHOW
+    /******* CHOW CHOW *******/
     {
         name: 'Chow Chow',
         id: 'chow',
@@ -362,7 +345,7 @@ breedPicker.breeds = [
         tendencyToBarkOrHowl: false,
         energyLevel: 'low'
     },
-    // SHAR PEI
+    /******* SHAR PEI *******/
     {
         name: 'Chinese Shar-Pei',
         id: 'shar-pei',
@@ -374,7 +357,7 @@ breedPicker.breeds = [
         hypoallergenic: false,
         furLength: 'short',
         shedding: 'heavy',
-        generalHealth: 'bad',
+        generalHealth: 'poor',
         size: 'l',
         easyToTrain: false,
         tendencyToBarkOrHowl: true,
@@ -383,21 +366,24 @@ breedPicker.breeds = [
 ];
 
 
-
 // DOCUMENT READY
 $(document).ready(function(){
     breedPicker.init();
     
 });
 
+// INIT
 breedPicker.init = function() {
     breedPicker.putDogsOnPage();
 
     $('input[type=checkbox]').on('click', breedPicker.filterBreeds);
+    $('select').on('change', breedPicker.filterBreeds);
 }
 
+// FUNCTION THAT CHECKS IF A PARTICULAR BREED CONFORMS TO A SELECTED SET OF FILTERS
 breedPicker.filterBreeds = function () {
-    // console.log('cliiic');
+   
+    /************* CHECKBOXES *************/
     const goodForApartment = $('#good-for-apartment').is(':checked');
     console.log(goodForApartment);
 
@@ -407,23 +393,51 @@ breedPicker.filterBreeds = function () {
     const kidFriendly = $('#kid-friendly').is(':checked');
     console.log(kidFriendly);
 
+    const goodWithPets = $('#good-with-pets').is(':checked');
+    console.log(goodWithPets);
+
+    const hypoallergenic = $('#hypoallergenic').is(':checked');
+    console.log(hypoallergenic);
+
+    const easyToTrain = $('#easy-to-train').is(':checked');
+    console.log(easyToTrain);
+
+    const tendencyToBarkOrHowl = $('#tendency-to-bark-or-howl').is(':checked');
+    console.log(tendencyToBarkOrHowl);
+
+    /************* SELECT LISTS *************/
+    const furLength = $('#fur-length').val();
+    console.log(furLength);
+
+    const shedding = $('#shedding').val();
+    console.log(shedding);
+
+    const generalHealth = $('#general-health').val();
+    console.log(generalHealth);
+
+    const size = $('#size').val();
+    console.log(size);
+
+    const energyLevel = $('#energy-level').val();
+    console.log(energyLevel);
+
+
 
     const breedCardIDs = breedPicker.breeds.map(function(breed) {
         return breed.id;
     });
-    // console.log(breedCardIDs);
 
     // hide all dog pictures
     $('.breed-card-container').hide();
+
+
     // decide which breeds need to be shown
     // based on the selected criteria
     breedPicker.breeds.forEach(function(breedObj) {
-        // let shouldShowBreed = true;
-
-        // let shouldHideBreed 
 
         let shouldShowBreed = true;
 
+        /************* CHECKBOXES *************/
         if (goodForApartment && breedObj.goodForApartment !== goodForApartment) {
             console.log(`${breedObj.name} goodForApt => shouldShow -> false`);
             shouldShowBreed = false;
@@ -439,23 +453,49 @@ breedPicker.filterBreeds = function () {
             shouldShowBreed = false;
         }
 
+        if (goodWithPets && breedObj.goodWithPets !== goodWithPets) {
+            console.log(`${breedObj.name} goodWithPets => should show-> false`);
+            shouldShowBreed = false;
+        }
+
+        if (hypoallergenic && breedObj.hypoallergenic !== hypoallergenic) {
+            console.log(`${breedObj.name} hypoallergenic => should show-> false`);
+            shouldShowBreed = false;
+        }
+
+        if (easyToTrain && breedObj.easyToTrain !== easyToTrain) {
+            console.log(`${breedObj.name} easyToTrain => should show-> false`);
+            shouldShowBreed = false;
+        }
+
+        if (tendencyToBarkOrHowl && breedObj.tendencyToBarkOrHowl !== tendencyToBarkOrHowl) {
+            console.log(`${breedObj.name} tendencyToBarkOrHowl => should show-> false`);
+            shouldShowBreed = false;
+        }
         
-        //     shouldShowBreed = shouldShowBreed && breedObj.requiresDogExperience !== requiresDogExperience;
-        // }
+        /************* SELECT LISTS *************/
+        console.log('fur length')
+        console.log(furLength);
+        if (furLength !== '' && breedObj.furLength !== furLength) {
+            shouldShowBreed = false;
+        }
 
+        if (shedding !== '' && breedObj.shedding !== shedding) {
+            shouldShowBreed = false;
+        }
 
+        if (generalHealth !== '' && breedObj.generalHealth !== generalHealth) {
+            shouldShowBreed = false;
+        }
 
-        // if (goodForApartment) {
-        //     shouldShowBreed = breedObj.goodForApartment !== goodForApartment;
-        // }
+        if (size !== '' && breedObj.size !== size) {
+            shouldShowBreed = false;
+        }
 
-        // if (requiresDogExperience) {
-        //     shouldShowBreed = shouldShowBreed && breedObj.requiresDogExperience !== requiresDogExperience;
-        // }
+        if (energyLevel !== '' && breedObj.energyLevel !== energyLevel) {
+            shouldShowBreed = false;
+        }
 
-        // if (kidFriendly) { 
-        //     shouldShowBreed = shouldShowBreed && breedObj.kidFriendly !== kidFriendly;
-        // }
 
 
         if (shouldShowBreed) {
@@ -472,7 +512,7 @@ breedPicker.putDogsOnPage = function() {
 
     // for every object in the breeds array 
     breedPicker.breeds.forEach(breed => {
-        // --> create a card with two sides: front: an image & back: dog breed name
+        // create a dog image card
 
         // create a breed-card-container
         const $container = $(`<div id="${breed.id}" class="breed-card-container"></div>`);

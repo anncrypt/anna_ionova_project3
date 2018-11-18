@@ -22,6 +22,7 @@
         </header>
         <main class="narrow-wrapper">
             <section id="breed-filters">
+
                 <!-- Filters and controls for the breeds -->
                 <div class="filter-container">
                     <input type="checkbox" id="good-for-apartment" name="good-for-apartment" unchecked>
@@ -35,7 +36,67 @@
                     <input type="checkbox" id="kid-friendly" name="kid-friendly" unchecked>
                     <label for="kid-friendly">loves kids</label>
                 </div>
-
+                <div class="filter-container">
+                    <input type="checkbox" id="good-with-pets" name="good-with-pets" unchecked>
+                    <label for="good-with-pets">gets along with other pets</label>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="hypoallergenic" name="hypoallergenic" unchecked>
+                    <label for="hypoallergenic">hypoallergenic</label>
+                </div>
+                <div class="furLength">
+                    <label for="fur-length">fur length:</label>
+                    <select id="fur-length">
+                        <option value="">--select an option--</option>
+                        <option value="short">short</option>
+                        <option value="medium">medium</option>
+                        <option value="long">long</option>
+                    </select>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="easy-to-train" name="easy-to-train" unchecked>
+                    <label for="easy-to-train">easy to train</label>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="tendency-to-bark-or-howl" name="tendency-to-bark-or-howl" unchecked>
+                    <label for="tendency-to-bark-or-howl">tend to bark or hawl</label>
+                </div>
+                <div class="shedding">
+                    <label for="shedding">amount of shedding:</label>
+                    <select id="shedding">
+                        <option value="">--select an option--</option>
+                        <option value="some">some</option>
+                        <option value="moderate">moderate</option>
+                        <option value="heavy">heavy</option>
+                    </select>
+                </div>
+                <div class="generalHealth">
+                    <label for="general-health">general health:</label>
+                    <select id="general-health">
+                        <option value="">--select an option--</option>
+                        <option value="poor">poor</option>
+                        <option value="moderate">moderate</option>
+                        <option value="good">good</option>
+                    </select>
+                </div>
+                <div class="size">
+                    <label for="size">size:</label>
+                    <select id="size">
+                        <option value="">--select an option--</option>
+                        <option value="s">small</option>
+                        <option value="m">medium</option>
+                        <option value="l">large</option>
+                    </select>
+                </div>
+                <div class="energyLevel">
+                    <label for="energy-level">energy level:</label>
+                    <select id="energy-level">
+                        <option value="">--select an option--</option>
+                        <option value="low">low</option>
+                        <option value="moderate">moderate</option>
+                        <option value="high">high</option>
+                    </select>
+                </div>
 
             </section>
             <section id="breed-gallery">
