@@ -396,18 +396,32 @@ $(document).ready(function(){
 // INIT
 breedPicker.init = function() {
     // all dog image cards are loaded on page
+    breedPicker.resetFilters();
     breedPicker.putDogsOnPage();
-    
+    breedPicker.addHoverToBreedCards();
+    breedPicker.setUpFilters();
+}
+
+breedPicker.resetFilters = function() {
+    // with every page refresh
+    // reset all the filters
+    $('input[type=checkbox]').prop('checked', false);
+    $('select').val('');
+}
+
+breedPicker.addHoverToBreedCards = function() {
     // images hover state functions below
     // on mouseover
-    $('.breed-card').on('mouseover', function() {
+    $('.breed-card').on('mouseover', function () {
         $(this).find('.hover-state').css('display', 'flex');
     });
     // on mouseout
     $('.breed-card').on('mouseout', function () {
         $(this).find('.hover-state').css('display', 'none');
     })
+}
 
+breedPicker.setUpFilters = function() {
     // filter functions below
     // on click on checkboxes
     $('input[type=checkbox]').on('click', breedPicker.filterBreeds);

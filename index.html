@@ -27,93 +27,96 @@
         </header>
         <!-- header ends -->
         <!-- main begins -->
-        <main class="narrow-wrapper">
+        <main>
+
             <section id="breed-filters">
-                <!-- filters and controls section starts -->
-                <!-- checkbox filters wrapper begins -->
-                <div class="checkbox-filters">
-                    <div class="filter-container">
-                        <input type="checkbox" id="good-for-apartment" name="good-for-apartment" unchecked>
-                        <label for="good-for-apartment">can live in an apartment</label>
+                <div class="narrow-wrapper">
+                    <!-- filters and controls section starts -->
+                    <!-- checkbox filters wrapper begins -->
+                    <div class="checkbox-filters">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="good-for-apartment" name="good-for-apartment" unchecked>
+                            <label for="good-for-apartment"><span>can live in an apartment</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="requires-dog-experience" name="requires-dog-experience" unchecked>
+                            <label for="requires-dog-experience"><span>requires dog experience</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="kid-friendly" name="kid-friendly" unchecked>
+                            <label for="kid-friendly"><span>loves kids</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="good-with-pets" name="good-with-pets" unchecked>
+                            <label for="good-with-pets"><span>gets along with pets</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="hypoallergenic" name="hypoallergenic" unchecked>
+                            <label for="hypoallergenic"><span>hypoallergenic</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="easy-to-train" name="easy-to-train" unchecked>
+                            <label for="easy-to-train"><span>easy to train</span></label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="tendency-to-bark-or-howl" name="tendency-to-bark-or-howl" unchecked>
+                            <label for="tendency-to-bark-or-howl"><span>tend to bark or hawl</span></label>
+                        </div>
                     </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="requires-dog-experience" name="requires-dog-experience" unchecked>
-                        <label for="requires-dog-experience">requires dog experience</label>
+                    <!-- checkbox filters wrapper ends -->
+                    <!-- select filters wrapper begins -->
+                    <div class="select-filters">
+                        <div class="select-container furLength">
+                            <label for="fur-length">fur length:</label>
+                            <select id="fur-length">
+                                <option value="">--select an option--</option>
+                                <option value="short">short</option>
+                                <option value="medium">medium</option>
+                                <option value="long">long</option>
+                            </select>
+                        </div>
+                        <div class="select-container shedding">
+                            <label for="shedding">amount of shedding:</label>
+                            <select id="shedding">
+                                <option value="">--select an option--</option>
+                                <option value="some">some</option>
+                                <option value="moderate">moderate</option>
+                                <option value="heavy">heavy</option>
+                            </select>
+                        </div>
+                        <div class="select-container generalHealth">
+                            <label for="general-health">general health:</label>
+                            <select id="general-health">
+                                <option value="">--select an option--</option>
+                                <option value="poor">poor</option>
+                                <option value="moderate">moderate</option>
+                                <option value="good">good</option>
+                            </select>
+                        </div>
+                        <div class="select-container size">
+                            <label for="size">size:</label>
+                            <select id="size">
+                                <option value="">--select an option--</option>
+                                <option value="s">small</option>
+                                <option value="m">medium</option>
+                                <option value="l">large</option>
+                            </select>
+                        </div>
+                        <div class="select-container energyLevel">
+                            <label for="energy-level">energy level:</label>
+                            <select id="energy-level">
+                                <option value="">--select an option--</option>
+                                <option value="low">low</option>
+                                <option value="moderate">moderate</option>
+                                <option value="high">high</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="kid-friendly" name="kid-friendly" unchecked>
-                        <label for="kid-friendly">loves kids</label>
-                    </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="good-with-pets" name="good-with-pets" unchecked>
-                        <label for="good-with-pets">gets along with other pets</label>
-                    </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="hypoallergenic" name="hypoallergenic" unchecked>
-                        <label for="hypoallergenic">hypoallergenic</label>
-                    </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="easy-to-train" name="easy-to-train" unchecked>
-                        <label for="easy-to-train">easy to train</label>
-                    </div>
-                    <div class="filter-container">
-                        <input type="checkbox" id="tendency-to-bark-or-howl" name="tendency-to-bark-or-howl" unchecked>
-                        <label for="tendency-to-bark-or-howl">tend to bark or hawl</label>
-                    </div>
+                    <!-- select filters wrapper ends -->
                 </div>
-                <!-- checkbox filters wrapper ends -->
-                <!-- select filters wrapper begins -->
-                <div class="select-filters">
-                    <div class="select-container furLength">
-                        <label for="fur-length">fur length:</label>
-                        <select id="fur-length">
-                            <option value="">--select an option--</option>
-                            <option value="short">short</option>
-                            <option value="medium">medium</option>
-                            <option value="long">long</option>
-                        </select>
-                    </div>
-                    <div class="select-container shedding">
-                        <label for="shedding">amount of shedding:</label>
-                        <select id="shedding">
-                            <option value="">--select an option--</option>
-                            <option value="some">some</option>
-                            <option value="moderate">moderate</option>
-                            <option value="heavy">heavy</option>
-                        </select>
-                    </div>
-                    <div class="select-container generalHealth">
-                        <label for="general-health">general health:</label>
-                        <select id="general-health">
-                            <option value="">--select an option--</option>
-                            <option value="poor">poor</option>
-                            <option value="moderate">moderate</option>
-                            <option value="good">good</option>
-                        </select>
-                    </div>
-                    <div class="select-container size">
-                        <label for="size">size:</label>
-                        <select id="size">
-                            <option value="">--select an option--</option>
-                            <option value="s">small</option>
-                            <option value="m">medium</option>
-                            <option value="l">large</option>
-                        </select>
-                    </div>
-                    <div class="select-container energyLevel">
-                        <label for="energy-level">energy level:</label>
-                        <select id="energy-level">
-                            <option value="">--select an option--</option>
-                            <option value="low">low</option>
-                            <option value="moderate">moderate</option>
-                            <option value="high">high</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- select filters wrapper ends -->
             </section>
             <!-- filters and controls section ends -->
-            <section id="breed-gallery">
+            <section id="breed-gallery" class="narrow-wrapper">
             <!-- dog breed 'cards' gallery starts,
             cards are generated in jQuery.
             dog breed 'card' structure:

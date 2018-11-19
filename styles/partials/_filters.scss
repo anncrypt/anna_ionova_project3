@@ -1,24 +1,36 @@
-.filter-container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 30px;
-    height: 30px;
-    background: rgb(68, 68, 68);
-    margin: 20px 90px;
-    border-radius: 100%;
-    position: relative;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+#breed-filters {
+    background: linear-gradient(rgba(168, 208, 230, 0.253), rgba(168, 208, 230, 0.233));
 }
 
-#breed-filters {
-    padding: 3rem;
+#breed-filters .narrow-wrapper {
+    display: flex;
+    padding: 10px 3rem 0 3rem;
     margin-bottom: 40px;
+}
 
-    .checkbox-filters{
+.checkbox-filters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 10px 0 30px 0;
+
+    .checkbox-container {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
 
-        margin-bottom: 30px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+
+        position: relative;
+        
+        margin-left: 100px;
+        margin-right: calc(50%-30px);
+        margin-bottom: 20px;
+        background: rgb(160, 160, 160);
+
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 
         input[type=checkbox] {
             transform: scale(2);
@@ -30,10 +42,7 @@
     
         label {
             display: block;
-            width: 20px;
-            height: 20px;
             border-radius: 100px;
-
             transition: all .5s ease;
             cursor: pointer;
             position: absolute;
@@ -41,42 +50,54 @@
             left: 5px;
             z-index: 1;
 
+            width: 10px;
+            height: 10px;
+
+            font-size: 1.7rem;
+
+
+            // background: rgb(68, 68, 68);
             background: rgb(160, 160, 160);
             box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5);
-        }
 
-    }
-
-
-    .select-filters {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-
-        .select-container  {
-            label {
-                display: block;
-                font-size: 2rem;
-                margin-bottom: 10px;
-                // text-align: center;
-            }
-
-            select {
-                font-size: 1.5rem;
-                background: $secondary-color;
-                color: $primary-color;
-                border: none;
-                padding: 5px;
-                border-radius: 7px;
-
-                option {
-                    // padding: 30px;
-                }
+            span {
+                position: absolute;
+                top: -2px;
+                left: 45px;
+                width: 250px;
             }
         }
-
-        
     }
+}
+
+.select-filters {
+    display: flex;
+    // flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    width: 50%;
+
+    .select-container  {
+
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 3px;
+            // text-align: center;
+        }
+
+        select {
+            font-size: 1.5rem;
+            background: rgba(36, 48, 94, 0.822); //  $primary-color;
+            color: white; //  $primary-color;
+            border: none;
+            padding: 5px;
+            border-radius: 7px;
+        }
+    }        
 }
 
 

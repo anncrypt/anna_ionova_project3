@@ -168,42 +168,56 @@ header {
   .header .logo-container h1 {
     margin: 0; }
 
-.filter-container {
+#breed-filters {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(168, 208, 230, 0.253)), to(rgba(168, 208, 230, 0.233)));
+  background: -webkit-linear-gradient(rgba(168, 208, 230, 0.253), rgba(168, 208, 230, 0.233));
+  background: -o-linear-gradient(rgba(168, 208, 230, 0.253), rgba(168, 208, 230, 0.233));
+  background: linear-gradient(rgba(168, 208, 230, 0.253), rgba(168, 208, 230, 0.233)); }
+
+#breed-filters .narrow-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 30px;
-  height: 30px;
-  background: #444444;
-  margin: 20px 90px;
-  border-radius: 100%;
-  position: relative;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
-
-#breed-filters {
-  padding: 3rem;
+  padding: 10px 3rem 0 3rem;
   margin-bottom: 40px; }
-  #breed-filters .checkbox-filters {
+
+.checkbox-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 10px 0 30px 0; }
+  .checkbox-filters .checkbox-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    margin-bottom: 30px; }
-    #breed-filters .checkbox-filters input[type=checkbox] {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: relative;
+    margin-left: 100px;
+    margin-right: calc(50%-30px);
+    margin-bottom: 20px;
+    background: #a0a0a0;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+    .checkbox-filters .checkbox-container input[type=checkbox] {
       -webkit-transform: scale(2);
       -ms-transform: scale(2);
       transform: scale(2);
       visibility: hidden; }
-      #breed-filters .checkbox-filters input[type=checkbox]:checked + label {
+      .checkbox-filters .checkbox-container input[type=checkbox]:checked + label {
         background: #F76C6C; }
-    #breed-filters .checkbox-filters label {
+    .checkbox-filters .checkbox-container label {
       display: block;
-      width: 20px;
-      height: 20px;
       border-radius: 100px;
       -webkit-transition: all .5s ease;
       -o-transition: all .5s ease;
@@ -213,26 +227,40 @@ header {
       top: 5px;
       left: 5px;
       z-index: 1;
+      width: 10px;
+      height: 10px;
+      font-size: 1.7rem;
       background: #a0a0a0;
       -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
       box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5); }
-  #breed-filters .select-filters {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-    #breed-filters .select-filters .select-container label {
+      .checkbox-filters .checkbox-container label span {
+        position: absolute;
+        top: -2px;
+        left: 45px;
+        width: 250px; }
+
+.select-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%; }
+  .select-filters .select-container {
+    margin-bottom: 15px; }
+    .select-filters .select-container label {
       display: block;
-      font-size: 2rem;
-      margin-bottom: 10px; }
-    #breed-filters .select-filters .select-container select {
       font-size: 1.5rem;
-      background: #A8D0E6;
-      color: #24305E;
+      margin-bottom: 3px; }
+    .select-filters .select-container select {
+      font-size: 1.5rem;
+      background: rgba(36, 48, 94, 0.822);
+      color: white;
       border: none;
       padding: 5px;
       border-radius: 7px; }
@@ -285,3 +313,22 @@ header {
       font-weight: 900;
       font-size: 2.2rem;
       color: white; }
+
+@media (max-width: 900px) {
+  #breed-filters .narrow-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .select-filters,
+  .checkbox-filters {
+    width: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .select-filters {
+    margin-bottom: 15px; }
+  .checkbox-filters .checkbox-container {
+    margin-left: 0px; }
+  .breed-card {
+    max-width: 90%; } }
