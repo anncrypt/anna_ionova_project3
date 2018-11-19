@@ -2,18 +2,46 @@
     padding: 3rem;
 
     .filter-container {
-        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: nowrap;
 
-        input[type=checkbox] {
-            // font-size: 22rem;
-            transform: scale(2);
-        }
+        
+        width: 30px;
+        height: 30px;
+        background: rgb(68, 68, 68);
+        margin: 20px 90px;
+        border-radius: 100%;
+        position: relative;
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+
+            input[type=checkbox] {
+                transform: scale(2);
+                visibility: hidden;
+                &:checked + label {
+                    background: $accent-color;
+                }
+            }
+        
+        
     
         label {
-            font-size: 2rem;
-            margin-left: 1.4rem;
-        }
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+
+            transition: all .5s ease;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+
+            background: rgb(160, 160, 160);
+            box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5);
+            }
 
     } 
 
 }
+

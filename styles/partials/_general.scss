@@ -6,12 +6,13 @@ html {
 .wrapper {
     max-width: 1600px;
     width: 100%;
-    border: solid 2px tomato;
 }
 
 .narrow-wrapper {
-    // max-width: 1600px;
     width: 80%;
     margin: 0 auto;
-    border: solid 2px tomato;
 }
+
+// main {
+//     background: linear-gradient(rgba(201, 223, 235, 0.034), rgba(206, 225, 235, 0.733));
+// }

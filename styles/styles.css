@@ -138,13 +138,11 @@ html {
 
 .wrapper {
   max-width: 1600px;
-  width: 100%;
-  border: solid 2px tomato; }
+  width: 100%; }
 
 .narrow-wrapper {
   width: 80%;
-  margin: 0 auto;
-  border: solid 2px tomato; }
+  margin: 0 auto; }
 
 header {
   background-color: #24305E;
@@ -174,25 +172,88 @@ header {
 #breed-filters {
   padding: 3rem; }
   #breed-filters .filter-container {
-    margin-bottom: 2rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 30px;
+    height: 30px;
+    background: #444444;
+    margin: 20px 90px;
+    border-radius: 100%;
+    position: relative;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
     #breed-filters .filter-container input[type=checkbox] {
       -webkit-transform: scale(2);
       -ms-transform: scale(2);
-      transform: scale(2); }
+      transform: scale(2);
+      visibility: hidden; }
+      #breed-filters .filter-container input[type=checkbox]:checked + label {
+        background: #F76C6C; }
     #breed-filters .filter-container label {
-      font-size: 2rem;
-      margin-left: 1.4rem; }
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      z-index: 1;
+      background: #a0a0a0;
+      -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5); }
 
 #breed-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .breed-card {
-  width: 200px;
-  height: 200px;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 200px;
+  flex: 1 200px;
+  max-width: 50%;
+  margin: 0 20px;
+  margin-bottom: 40px;
   border-radius: 3px; }
-  .breed-card .breed-pic {
+  .breed-card .img-container .breed-pic {
     width: 100%; }
+  .breed-card .hover-state {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 108, 108, 0.671)), to(rgba(247, 108, 108, 0.698)));
+    background: -webkit-linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
+    background: -o-linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
+    background: linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: none; }
+    .breed-card .hover-state p {
+      font-family: "Cabin Sketch", cursive;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 2.2rem;
+      color: white;
+      text-align: center; }

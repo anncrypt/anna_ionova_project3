@@ -5,6 +5,7 @@ breedPicker.breeds = [
     {
         name: 'English Cocker Spaniel',
         id: 'spaniel',
+        url: 'https://dogtime.com/dog-breeds/cocker-spaniel',
         image: 'spaniel.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -23,6 +24,7 @@ breedPicker.breeds = [
     {
         name: 'Pug',
         id: 'pug',
+        url: 'https://dogtime.com/dog-breeds/pug',
         image: 'puggy.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -41,6 +43,7 @@ breedPicker.breeds = [
     {
         name: 'Goldendoodle',
         id: 'doodle',
+        url: 'https://dogtime.com/dog-breeds/goldendoodle',
         image: 'goldendoodle.jpg',
         goodForApartment: false,
         requiresDogExperience: false,
@@ -59,6 +62,7 @@ breedPicker.breeds = [
     {
         name: 'Maltese Terrier',
         id: 'maltese',
+        url: 'https://dogtime.com/dog-breeds/maltese',
         image: 'maltese.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -77,6 +81,7 @@ breedPicker.breeds = [
     {
         name: 'Beagle',
         id: 'beagle',
+        url: 'https://dogtime.com/dog-breeds/beagle',
         image: 'beagle.jpg',
         goodForApartment: true,
         requiresDogExperience: true,
@@ -95,6 +100,7 @@ breedPicker.breeds = [
     {
         name: 'Shiba Inu',
         id: 'shiba',
+        url: 'https://dogtime.com/dog-breeds/shiba-inu',
         image: 'shibainu.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -114,6 +120,7 @@ breedPicker.breeds = [
     {
         name: 'Dachshund',
         id: 'dachshund',
+        url: 'https://dogtime.com/dog-breeds/dachshund',
         image: 'dachshund.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -132,6 +139,7 @@ breedPicker.breeds = [
     {
         name: 'Chihuahua',
         id: 'chihua',
+        url: 'https://dogtime.com/dog-breeds/chihuahua',
         image: 'chihuahua.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -151,6 +159,7 @@ breedPicker.breeds = [
     {
         name: 'Pembroke Welsh Corgi',
         id: 'corgi',
+        url: 'https://dogtime.com/dog-breeds/pembroke-welsh-corgi',
         image: 'corgi.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -169,6 +178,7 @@ breedPicker.breeds = [
     {
         name: 'French Bulldog',
         id: 'frenchie',
+        url: 'https://dogtime.com/dog-breeds/french-bulldog',
         image: 'frenchie.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -187,6 +197,7 @@ breedPicker.breeds = [
     {
         name: 'Golden Retriever',
         id: 'retriever',
+        url: 'https://dogtime.com/dog-breeds/golden-retriever',
         image: 'goldenretriever.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -205,6 +216,7 @@ breedPicker.breeds = [
     {
         name: 'Pit Bull Terrier',
         id: 'pitbull',
+        url: 'https://dogtime.com/dog-breeds/american-pit-bull-terrier',
         image: 'pitbullterrier.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -223,6 +235,7 @@ breedPicker.breeds = [
     {
         name: 'Basenji',
         id: 'basenji',
+        url: 'https://dogtime.com/dog-breeds/basenji',
         image: 'basenji.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -241,6 +254,7 @@ breedPicker.breeds = [
     {
         name: 'Alaskan Malamute',
         id: 'malamute',
+        url: 'https://dogtime.com/dog-breeds/alaskan-malamute',
         image: 'malamute.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -259,6 +273,7 @@ breedPicker.breeds = [
     {
         name: 'Great Dane',
         id: 'dane',
+        url: 'https://dogtime.com/dog-breeds/great-dane',
         image: 'greatdane.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -277,6 +292,7 @@ breedPicker.breeds = [
     {
         name: 'Australian Shepherd',
         id: 'aussie',
+        url: 'https://dogtime.com/dog-breeds/australian-shepherd',
         image: 'aussie.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -295,6 +311,7 @@ breedPicker.breeds = [
     {
         name: 'Basset Hound',
         id: 'basset',
+        url: 'https://dogtime.com/dog-breeds/basset-hound',
         image: 'basset.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -313,6 +330,7 @@ breedPicker.breeds = [
     {
         name: 'Pomeranian',
         id: 'pomeranian',
+        url: 'https://dogtime.com/dog-breeds/pomeranian',
         image: 'pomeranian.jpg',
         goodForApartment: true,
         requiresDogExperience: false,
@@ -331,6 +349,7 @@ breedPicker.breeds = [
     {
         name: 'Chow Chow',
         id: 'chow',
+        url: 'https://dogtime.com/dog-breeds/chow-chow',
         image: 'chow.jpg',
         goodForApartment: false,
         requiresDogExperience: true,
@@ -349,6 +368,7 @@ breedPicker.breeds = [
     {
         name: 'Chinese Shar-Pei',
         id: 'shar-pei',
+        url: 'https://dogtime.com/dog-breeds/chinese-shar-pei',
         image: 'sharpei.jpg',
         goodForApartment: true,
         requiresDogExperience: true,
@@ -375,6 +395,14 @@ $(document).ready(function(){
 // INIT
 breedPicker.init = function() {
     breedPicker.putDogsOnPage();
+    
+    $('.breed-card').on('mouseover', function() {
+        $(this).find('.hover-state').css('display', 'flex');
+    });
+
+    $('.breed-card').on('mouseout', function () {
+        $(this).find('.hover-state').css('display', 'none');
+    })
 
     $('input[type=checkbox]').on('click', breedPicker.filterBreeds);
     $('select').on('change', breedPicker.filterBreeds);
@@ -428,7 +456,7 @@ breedPicker.filterBreeds = function () {
     });
 
     // hide all dog pictures
-    $('.breed-card-container').hide();
+    $('.breed-card').hide();
 
 
     // decide which breeds need to be shown
@@ -496,14 +524,13 @@ breedPicker.filterBreeds = function () {
             shouldShowBreed = false;
         }
 
-
-
+        console.log(`shouldShowBreed ${shouldShowBreed}`);
         if (shouldShowBreed) {
             $(`#${breedObj.id}`).show();
         }
     });
 
-}
+};
 
 
 breedPicker.putDogsOnPage = function() {
@@ -511,41 +538,32 @@ breedPicker.putDogsOnPage = function() {
     const $gallery = $('#breed-gallery');
 
     // for every object in the breeds array 
-    breedPicker.breeds.forEach(breed => {
+    breedPicker.breeds.forEach(function(breed) {
         // create a dog image card
-
-        // create a breed-card-container
-        const $container = $(`<div id="${breed.id}" class="breed-card-container"></div>`);
-
-        // create a breed-card 
-        const $card = $(`<div class="breed-card"></div>`);
-
-        // put a breed-card into the breed-card-container
-        $container.append($card);
-
+        const $card = $(`<a href="${breed.url}" target ="_blank" id="${breed.id}" class="breed-card"></a>`);
         
         // create a front-side of the card
-        const $frontSide = $(`<div class="front-side"></div>`);
+        const $imgContainer = $(`<div class="img-container"></div>`);
 
         // create an img element and give it src and alt
         const $img = $(`<img class="breed-pic" src="assets/${breed.image}" alt="picture of ${breed.name}">`);
 
-        // put img inside the front-side container
-        $frontSide.append($img);
+        // put img inside the image container
+        $imgContainer.append($img);
 
-        // create a back-side of the card
-        const $backSide = $(`<div class="back-side"></div>`);
+        // create a hover-state 
+        const $hoverState = $(`<div class="hover-state"></div>`);
         // create a p element and put breed name into it
         const $breedName = $(`<p>${breed.name}</p>`);
 
-        // put p inside the back-side container
-        $backSide.append($breedName);
+        // put p inside the hover-state container
+        $hoverState.append($breedName);
 
-        $card.append($frontSide);
-        $card.append($backSide);
+        $card.append($imgContainer);
+        $card.append($hoverState);
 
-        // put container inside the breed gallery
-        $gallery.append($container);
+        // put breed-card inside the gallery
+        $gallery.append($card);
     });
 
 

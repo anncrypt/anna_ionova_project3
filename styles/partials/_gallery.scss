@@ -1,14 +1,44 @@
 #breed-gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .breed-card {
-    width: 200px;
-    height: 200px;
+    position: relative;
+    flex: 1 200px;
+    max-width: 50%;
+    margin: 0 20px;
+    margin-bottom: 40px;
     border-radius: 3px;
 
-    .breed-pic {
-        width: 100%;
+    .img-container {
+       
+        .breed-pic {
+            width: 100%;
+        }
+    }
+    
+    .hover-state {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(247, 108, 108, 0.671),rgba(247, 108, 108, 0.698));
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        display: none;
+        
+        p {
+            font-family: $accent-font;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 2.2rem;
+            color: white;
+            text-align: center;
+        } 
     }
 }
+

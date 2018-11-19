@@ -13,10 +13,10 @@
         <header>
             <div class="header narrow-wrapper">
                 <div class="svg-container">
-                    <img src="assets/pup.svg" alt="dog icon">
+                    <img src="assets/icons/pup.svg" alt="dog icon">
                 </div>
                 <div class="logo-container">
-                    <h1>Pupmatcher</h1>
+                    <h1>PupMatcher</h1>
                 </div>
             </div>
         </header>
@@ -25,7 +25,9 @@
 
                 <!-- Filters and controls for the breeds -->
                 <div class="filter-container">
+                    
                     <input type="checkbox" id="good-for-apartment" name="good-for-apartment" unchecked>
+                    
                     <label for="good-for-apartment">can live in an apartment</label>
                 </div>
                 <div class="filter-container">
@@ -44,6 +46,14 @@
                     <input type="checkbox" id="hypoallergenic" name="hypoallergenic" unchecked>
                     <label for="hypoallergenic">hypoallergenic</label>
                 </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="easy-to-train" name="easy-to-train" unchecked>
+                    <label for="easy-to-train">easy to train</label>
+                </div>
+                <div class="filter-container">
+                    <input type="checkbox" id="tendency-to-bark-or-howl" name="tendency-to-bark-or-howl" unchecked>
+                    <label for="tendency-to-bark-or-howl">tend to bark or hawl</label>
+                </div>
                 <div class="furLength">
                     <label for="fur-length">fur length:</label>
                     <select id="fur-length">
@@ -52,14 +62,6 @@
                         <option value="medium">medium</option>
                         <option value="long">long</option>
                     </select>
-                </div>
-                <div class="filter-container">
-                    <input type="checkbox" id="easy-to-train" name="easy-to-train" unchecked>
-                    <label for="easy-to-train">easy to train</label>
-                </div>
-                <div class="filter-container">
-                    <input type="checkbox" id="tendency-to-bark-or-howl" name="tendency-to-bark-or-howl" unchecked>
-                    <label for="tendency-to-bark-or-howl">tend to bark or hawl</label>
                 </div>
                 <div class="shedding">
                     <label for="shedding">amount of shedding:</label>
@@ -103,17 +105,16 @@
             
             <!-- Dog breed 'cards' will go here
             they will be generated in jQuery
-
-                <div class="breed-card-container">!
-                    <div class="breed-card">!
-                        <div class="front-side">!
-                            <img src="#" alt="" >!
-                        </div>
-                        <div class="back-side">!
-                            <p>Breed name</p>!
-                        </div>
-                    </div> 
-                </div> -->
+                
+                <div class="breed-card">!
+                    <div class="img-container">!
+                        <img class="breed-pic" src="#" alt="" >!
+                    </div>
+                    <div class="hover-state">!
+                        <p>Breed name</p>!
+                    </div>
+                </div> 
+             -->
             
             </section>
         </main>
