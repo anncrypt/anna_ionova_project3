@@ -9,14 +9,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .svg-container {
-        width: 7%;
+        width: 8%;
+        
         img {
             width: 100%;
-            color: $light-color;
             margin: 0;
         }
     }
+
     .logo-container {
         h1 {
             margin: 0;

@@ -161,38 +161,46 @@ header {
   -ms-flex-align: center;
   align-items: center; }
   .header .svg-container {
-    width: 7%; }
+    width: 8%; }
     .header .svg-container img {
       width: 100%;
-      color: #f6f6f6;
       margin: 0; }
   .header .logo-container h1 {
     margin: 0; }
 
+.filter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 30px;
+  height: 30px;
+  background: #444444;
+  margin: 20px 90px;
+  border-radius: 100%;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+
 #breed-filters {
-  padding: 3rem; }
-  #breed-filters .filter-container {
+  padding: 3rem;
+  margin-bottom: 40px; }
+  #breed-filters .checkbox-filters {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    width: 30px;
-    height: 30px;
-    background: #444444;
-    margin: 20px 90px;
-    border-radius: 100%;
-    position: relative;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
-    #breed-filters .filter-container input[type=checkbox] {
+    margin-bottom: 30px; }
+    #breed-filters .checkbox-filters input[type=checkbox] {
       -webkit-transform: scale(2);
       -ms-transform: scale(2);
       transform: scale(2);
       visibility: hidden; }
-      #breed-filters .filter-container input[type=checkbox]:checked + label {
+      #breed-filters .checkbox-filters input[type=checkbox]:checked + label {
         background: #F76C6C; }
-    #breed-filters .filter-container label {
+    #breed-filters .checkbox-filters label {
       display: block;
       width: 20px;
       height: 20px;
@@ -208,6 +216,26 @@ header {
       background: #a0a0a0;
       -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
       box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5); }
+  #breed-filters .select-filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #breed-filters .select-filters .select-container label {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px; }
+    #breed-filters .select-filters .select-container select {
+      font-size: 1.5rem;
+      background: #A8D0E6;
+      color: #24305E;
+      border: none;
+      padding: 5px;
+      border-radius: 7px; }
 
 #breed-gallery {
   display: -webkit-box;
@@ -241,10 +269,10 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 108, 108, 0.671)), to(rgba(247, 108, 108, 0.698)));
-    background: -webkit-linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
-    background: -o-linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
-    background: linear-gradient(rgba(247, 108, 108, 0.671), rgba(247, 108, 108, 0.698));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(247, 108, 108, 0.767)), to(rgba(247, 108, 108, 0.767)));
+    background: -webkit-linear-gradient(rgba(247, 108, 108, 0.767), rgba(247, 108, 108, 0.767));
+    background: -o-linear-gradient(rgba(247, 108, 108, 0.767), rgba(247, 108, 108, 0.767));
+    background: linear-gradient(rgba(247, 108, 108, 0.767), rgba(247, 108, 108, 0.767));
     top: 5%;
     left: 5%;
     width: 90%;
@@ -253,7 +281,7 @@ header {
     .breed-card .hover-state p {
       font-family: "Cabin Sketch", cursive;
       text-transform: uppercase;
+      text-align: center;
       font-weight: 900;
       font-size: 2.2rem;
-      color: white;
-      text-align: center; }
+      color: white; }

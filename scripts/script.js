@@ -1,5 +1,7 @@
+//EMPTY OBJECT TO ORGANIZE CODE
 const breedPicker = {};
 
+// ARRAY WITH 20 DOG BREED OBJECTS BELOW
 breedPicker.breeds = [
     /******* COCKER SPANIEL *******/
     {
@@ -388,72 +390,62 @@ breedPicker.breeds = [
 
 // DOCUMENT READY
 $(document).ready(function(){
-    breedPicker.init();
-    
+    breedPicker.init(); 
 });
 
 // INIT
 breedPicker.init = function() {
+    // all dog image cards are loaded on page
     breedPicker.putDogsOnPage();
     
+    // images hover state functions below
+    // on mouseover
     $('.breed-card').on('mouseover', function() {
         $(this).find('.hover-state').css('display', 'flex');
     });
-
+    // on mouseout
     $('.breed-card').on('mouseout', function () {
         $(this).find('.hover-state').css('display', 'none');
     })
 
+    // filter functions below
+    // on click on checkboxes
     $('input[type=checkbox]').on('click', breedPicker.filterBreeds);
+    // on change in select options
     $('select').on('change', breedPicker.filterBreeds);
 }
 
 // FUNCTION THAT CHECKS IF A PARTICULAR BREED CONFORMS TO A SELECTED SET OF FILTERS
 breedPicker.filterBreeds = function () {
    
-    /************* CHECKBOXES *************/
+    // get filter values
+
+    /************* checkboxes *************/
     const goodForApartment = $('#good-for-apartment').is(':checked');
-    console.log(goodForApartment);
 
     const requiresDogExperience = $('#requires-dog-experience').is(':checked');
-    console.log(requiresDogExperience);
 
     const kidFriendly = $('#kid-friendly').is(':checked');
-    console.log(kidFriendly);
 
     const goodWithPets = $('#good-with-pets').is(':checked');
-    console.log(goodWithPets);
 
     const hypoallergenic = $('#hypoallergenic').is(':checked');
-    console.log(hypoallergenic);
 
     const easyToTrain = $('#easy-to-train').is(':checked');
-    console.log(easyToTrain);
 
     const tendencyToBarkOrHowl = $('#tendency-to-bark-or-howl').is(':checked');
-    console.log(tendencyToBarkOrHowl);
 
-    /************* SELECT LISTS *************/
+    /************* select options *************/
     const furLength = $('#fur-length').val();
-    console.log(furLength);
 
     const shedding = $('#shedding').val();
-    console.log(shedding);
 
     const generalHealth = $('#general-health').val();
-    console.log(generalHealth);
 
     const size = $('#size').val();
-    console.log(size);
 
     const energyLevel = $('#energy-level').val();
-    console.log(energyLevel);
 
-
-
-    const breedCardIDs = breedPicker.breeds.map(function(breed) {
-        return breed.id;
-    });
 
     // hide all dog pictures
     $('.breed-card').hide();
@@ -463,47 +455,41 @@ breedPicker.filterBreeds = function () {
     // based on the selected criteria
     breedPicker.breeds.forEach(function(breedObj) {
 
+        // start with showing breed by default
         let shouldShowBreed = true;
 
-        /************* CHECKBOXES *************/
+        // for only filters that are checked, make sure breed satisfies each of them
+
+        /************* checkboxes *************/
         if (goodForApartment && breedObj.goodForApartment !== goodForApartment) {
-            console.log(`${breedObj.name} goodForApt => shouldShow -> false`);
             shouldShowBreed = false;
         }
 
         if (requiresDogExperience && breedObj.requiresDogExperience !== requiresDogExperience) {
-            console.log(`${breedObj.name} requiresDogExperience => should show-> false`);
             shouldShowBreed = false;
         }
 
         if (kidFriendly && breedObj.kidFriendly !== kidFriendly) {
-            console.log(`${breedObj.name} kidFriendly => should show-> false`);
             shouldShowBreed = false;
         }
 
         if (goodWithPets && breedObj.goodWithPets !== goodWithPets) {
-            console.log(`${breedObj.name} goodWithPets => should show-> false`);
             shouldShowBreed = false;
         }
 
         if (hypoallergenic && breedObj.hypoallergenic !== hypoallergenic) {
-            console.log(`${breedObj.name} hypoallergenic => should show-> false`);
             shouldShowBreed = false;
         }
 
         if (easyToTrain && breedObj.easyToTrain !== easyToTrain) {
-            console.log(`${breedObj.name} easyToTrain => should show-> false`);
             shouldShowBreed = false;
         }
 
         if (tendencyToBarkOrHowl && breedObj.tendencyToBarkOrHowl !== tendencyToBarkOrHowl) {
-            console.log(`${breedObj.name} tendencyToBarkOrHowl => should show-> false`);
             shouldShowBreed = false;
         }
         
-        /************* SELECT LISTS *************/
-        console.log('fur length')
-        console.log(furLength);
+        /************* select options *************/
         if (furLength !== '' && breedObj.furLength !== furLength) {
             shouldShowBreed = false;
         }
@@ -524,7 +510,7 @@ breedPicker.filterBreeds = function () {
             shouldShowBreed = false;
         }
 
-        console.log(`shouldShowBreed ${shouldShowBreed}`);
+        // if shouldShowBreed is true we show this card
         if (shouldShowBreed) {
             $(`#${breedObj.id}`).show();
         }
@@ -532,7 +518,7 @@ breedPicker.filterBreeds = function () {
 
 };
 
-
+// ADDING & DISPLAYING IMAGE GALLERY ON THE PAGE
 breedPicker.putDogsOnPage = function() {
     // give a gallery an id of "breed-gallery"
     const $gallery = $('#breed-gallery');
@@ -565,8 +551,6 @@ breedPicker.putDogsOnPage = function() {
         // put breed-card inside the gallery
         $gallery.append($card);
     });
-
-
 }
 
 

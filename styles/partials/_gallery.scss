@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(rgba(247, 108, 108, 0.671),rgba(247, 108, 108, 0.698));
+        background: linear-gradient(rgba(247, 108, 108, 0.767),rgba(247, 108, 108, 0.767));
         top: 5%;
         left: 5%;
         width: 90%;
@@ -34,10 +34,10 @@
         p {
             font-family: $accent-font;
             text-transform: uppercase;
+            text-align: center;
             font-weight: 900;
             font-size: 2.2rem;
             color: white;
-            text-align: center;
         } 
     }
 }
